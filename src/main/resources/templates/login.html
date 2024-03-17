@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style_login.css">
+</head>
+<body>
+<div class="container">
+    <img src="images/logo.png" alt="Logo Image">
+    <div class="login-section">
+        <h1>로그인</h1>
+        <form id="login-form" method="post">
+            <div>
+                <label for="username">아이디</label>
+                <input type="text" id="username" name="name" placeholder="Username">
+            </div>
+            <div>
+                <label for="password">패스워드</label>
+                <input type="password" id="password" name="pw" placeholder="Password">
+            </div>
+            <button type="submit" id="login-btn">로그인</button>
+        </form>
+        <div id="message"></div>
+    </div>
+</div>
+<script src="js/script_login.js"></script>
+</body>
+</html>

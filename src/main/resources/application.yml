@@ -1,0 +1,50 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST}:3306/coupon
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  data:
+    redis:
+      cluster:
+        nodes:
+          - ${REDIS_NODES_SHARD1}
+#          - ${REDIS_NODES_SHARD2}
+#          - ${REDIS_NODES_SHARD3}
+
+server:
+  port: 8080
+  servlet:
+    context-path: /coupon
+
+kafka:
+  consumer:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+    group-id: ${KAFKA_GROUP_ID}
+#    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    value-deserializer: org.apache.kafka.common.serialization.LongDeserializer
+
+  producer:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+#    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#    value-serializer: org.apache.kafka.common.serialization.LongSerializer
+
+  properties:
+    topic: ${KAFKA_TOPIC}
+
+
+logging:
+  level:
+    org.springframework.jdbc: DEBUG
+
+coupon:
+  max-count: ${COUPON_COUNT}
+
+management:
+  endpoint:
+    metrics:
+      enabled: true

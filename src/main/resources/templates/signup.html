@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style_login.css">
+</head>
+<body>
+<div class="container">
+    <img src="images/logo.png" alt="Logo Image">
+    <div class="login-section">
+        <h1>회원가입</h1>
+        <form id="login-form">
+            <div>
+                <label for="username">아이디를 입력하세요</label>
+                <input type="text" id="username" name="name" placeholder="Username">
+            </div>
+            <div>
+                <label for="password">패스워드를 입력하세요</label>
+                <input type="password" id="password" name="pw" placeholder="Password">
+            </div>
+            <button type="button" id="login-btn">가입하기</button>
+        </form>
+        <div id="message"></div>
+    </div>
+</div>
+<script src="js/script_signup.js"></script>
+</body>
+</html>
